@@ -361,7 +361,7 @@ module.exports = class Reader extends Component {
         <section style={containerStyle}>
           {
             (!legacyMode && showViewFinder)
-            ? <div style={viewFinderStyle} />
+            ? <div style={vFStyle} />
             : null
           }
           {
