@@ -29,6 +29,7 @@ module.exports = class Reader extends Component {
     resolution: PropTypes.number,
     showViewFinder: PropTypes.bool,
     style: PropTypes.any,
+    viewFinderStyle: PropTypes.any,
     className: PropTypes.string,
     constraints: PropTypes.object
   };
@@ -312,6 +313,7 @@ module.exports = class Reader extends Component {
       onImageLoad,
       legacyMode,
       showViewFinder,
+      viewFinderStyle,
       facingMode
     } = this.props
 
@@ -341,7 +343,7 @@ module.exports = class Reader extends Component {
       objectFit: 'scale-down',
     }
 
-    const viewFinderStyle = {
+    const vFStyle = {
       top: 0,
       left: 0,
       zIndex: 1,
@@ -351,6 +353,7 @@ module.exports = class Reader extends Component {
       position: 'absolute',
       width: '100%',
       height: '100%',
+      ...viewFinderStyle,
     }
 
     return (
